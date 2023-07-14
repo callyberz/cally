@@ -1,10 +1,10 @@
 import { type NextPage } from "next";
-import Head from "next/head";
-import Link from "next/link";
-import { signIn, signOut, useSession } from "next-auth/react";
+// import Head from "next/head";
+// import Link from "next/link";
+// import { signIn, signOut, useSession } from "next-auth/react";
 
-import { api } from "../utils/api";
-import Layout from "./components/Layout";
+// import { api } from "../utils/api";
+import Layout from "src/components/Layout";
 
 const Home: NextPage = () => {
   return (

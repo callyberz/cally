@@ -61,6 +61,7 @@ export function Header() {
               <li className="row-span-3">
                 <NavigationMenuLink asChild>
                   <a
+                  {/* eslint-disable-next-line @next/next/no-html-link-for-pages */}
                     className="from-muted/50 to-muted flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b p-6 no-underline outline-none focus:shadow-md"
                     href="/"
                   >

@@ -1,15 +1,79 @@
 import { type NextPage } from "next";
+import React from "react";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "src/components/ui/card";
+
 // import Head from "next/head";
 // import Link from "next/link";
 // import { signIn, signOut, useSession } from "next-auth/react";
 
 // import { api } from "../utils/api";
 import Layout from "src/components/Layout";
+import { education, experiences } from "src/constants/data";
+import { Separator } from "src/components/ui/separator";
 
 const Home: NextPage = () => {
+  const renderEducation = React.useMemo(() => {
+    return (
+      <Card className="w-[350px]">
+        <CardHeader>
+          <CardTitle>Education</CardTitle>
+          <CardDescription>My previous study...</CardDescription>
+        </CardHeader>
+        {education.map((item, key) => {
+          return (
+            <>
+              <CardContent>
+                <p>{item.school}</p>
+                <p>{item.location}</p>
+                <p>{item.programme}</p>
+                <p>{`${item.dateStart} ${item.dateEnd}`}</p>
+              </CardContent>
+              {key !== education.length - 1 && <Separator />}
+            </>
+          );
+        })}
+      </Card>
+    );
+  }, []);
+
+  const renderExperiences = React.useMemo(() => {
+    return (
+      <Card className="w-[350px]">
+        <CardHeader>
+          <CardTitle>Working Experience</CardTitle>
+        </CardHeader>
+        {experiences.map((item, key) => {
+          return (
+            <>
+              <CardContent>
+                <p>{item.company}</p>
+                <p>{item.title}</p>
+                <p>{item.location}</p>
+                <p>{`${item.dateStart} ${item?.dateEnd ?? "now"}`}</p>
+                {item.descriptions.map((value) => (
+                  <>{value}</>
+                ))}
+              </CardContent>
+              {key !== experiences.length - 1 && <Separator />}
+            </>
+          );
+        })}
+      </Card>
+    );
+  }, []);
+
   return (
     <>
-      <Layout>{/* <h1>hello</h1> */}</Layout>
+      <Layout>
+        {renderEducation}
+        {renderExperiences}
+      </Layout>
     </>
   );
 };

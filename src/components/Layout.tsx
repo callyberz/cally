@@ -8,9 +8,9 @@ interface Props {
 
 export default function Layout({ children }: Props) {
   return (
-    <div className="h-full min-h-full p-4">
-      {/* <Header /> */}
-      <main>{children}</main>
+    <div className="p-4">
+      <Header />
+      <main className="flex gap-x-4">{children}</main>
       {/* <Footer /> */}
     </div>
   );

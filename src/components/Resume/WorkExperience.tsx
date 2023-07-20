@@ -18,7 +18,7 @@ export const WorkExperience = () => {
   return (
     <Card
       className={cx(
-        "flex-1",
+        "flex-1 bg-neutral-900",
         selectedColumn === ResumeColumn.WORK && selectedColumnsStyle
       )}
     >
@@ -30,14 +30,16 @@ export const WorkExperience = () => {
           <>
             <CardContent>
               <ToggleContent title={item.company}>
-                <p>{item.title}</p>
-                <p>{item.location}</p>
-                <p>{`${item.dateStart} ${item?.dateEnd ?? "now"}`}</p>
-                {item.descriptions.map((value, index) => (
-                  <ul className="list-disc" key={index}>
-                    <li>{value}</li>
-                  </ul>
-                ))}
+                <div className="dark:text-slate-400">
+                  <p>{item.title}</p>
+                  <p>{item.location}</p>
+                  <p>{`${item.dateStart} ${item?.dateEnd ?? "now"}`}</p>
+                  {item.descriptions.map((value, index) => (
+                    <ul className="list-disc" key={index}>
+                      <li>{value}</li>
+                    </ul>
+                  ))}
+                </div>
               </ToggleContent>
             </CardContent>
           </>

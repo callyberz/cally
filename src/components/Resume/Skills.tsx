@@ -1,4 +1,3 @@
-import { Separator } from "@radix-ui/react-separator";
 import React, { useContext } from "react";
 import {
   Card,
@@ -20,7 +19,7 @@ export const Skills = () => {
   return (
     <Card
       className={cx(
-        "flex-1",
+        "flex-1 bg-neutral-900",
         selectedColumn === ResumeColumn.ABOUT && selectedColumnsStyle
       )}
     >
@@ -28,19 +27,20 @@ export const Skills = () => {
         <CardTitle>Skills</CardTitle>
         <CardDescription>My programming skills</CardDescription>
       </CardHeader>
-      {skills.map((skill, key) => {
+      {skills.map((skill) => {
         return (
           <>
             <CardContent>
-              <p>{skill.type.toUpperCase()}</p>
+              <p>{skill.type.toLocaleLowerCase()}</p>
               {skill.items.map((value, key) => (
-                <Badge variant="outline" key={key} className="mr-2">
+                <Badge
+                  variant="outline"
+                  key={key}
+                  className="mr-2 dark:text-slate-400"
+                >
                   {value}
                 </Badge>
               ))}
-              {/* {skill.highlights.map((value, key) => (
-                <div key={key}>{value}</div>
-              ))} */}
             </CardContent>
           </>
         );

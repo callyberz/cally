@@ -19,7 +19,7 @@ export const Education = () => {
   return (
     <Card
       className={cx(
-        "flex-1",
+        "flex-1 bg-neutral-900",
         selectedColumn === ResumeColumn.EDUCATION && selectedColumnsStyle
       )}
     >
@@ -30,7 +30,7 @@ export const Education = () => {
       {education.map((item, key) => {
         return (
           <>
-            <CardContent>
+            <CardContent className="dark:text-slate-400">
               <p>{item.school}</p>
               <p>{item.location}</p>
               <p>{item.programme}</p>

@@ -1,3 +1,4 @@
+import { cx } from "class-variance-authority";
 import {
   Accordion,
   AccordionContent,
@@ -7,13 +8,18 @@ import {
 
 export interface Props {
   title: string;
+  className?: string;
   children: React.ReactNode;
 }
 
-export const ToggleContent = ({ title, children }: Props) => {
+export const ToggleContent = ({ title, className, children }: Props) => {
   return (
-    <Accordion type="single" collapsible className="w-full rounded-md">
-      <AccordionItem value="item-1" className="px-4">
+    <Accordion
+      type="single"
+      collapsible
+      className={cx("w-full rounded-md", className)}
+    >
+      <AccordionItem value="item-1" className="">
         <AccordionTrigger className="whitespace-nowrap">
           {title}
         </AccordionTrigger>

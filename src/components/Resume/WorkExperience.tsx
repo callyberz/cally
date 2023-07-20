@@ -10,9 +10,9 @@ import { ResumeContext } from "./ResumeProvider";
 import { selectedColumnsStyle } from "src/constants/Style";
 import { cx } from "class-variance-authority";
 import { ResumeColumn } from "src/types/Resume";
-import { ToggleContent } from "./ToggleContent";
+import { ToggleContent } from "../common/ToggleContent";
 
-export const Work = () => {
+export const WorkExperience = () => {
   const { selectedColumn } = useContext(ResumeContext);
 
   return (

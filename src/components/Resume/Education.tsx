@@ -19,7 +19,7 @@ export const Education = () => {
   return (
     <Card
       className={cx(
-        "w-[250px]",
+        "flex-1",
         selectedColumn === ResumeColumn.EDUCATION && selectedColumnsStyle
       )}
     >

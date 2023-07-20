@@ -55,7 +55,7 @@ export function Header() {
         <NavigationMenuItem>
           <Link href="/" as="/" legacyBehavior passHref>
             <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-              <HomeIcon className="md:mr-2 md:inline" />
+              <HomeIcon className="md:inline" />
             </NavigationMenuLink>
           </Link>
         </NavigationMenuItem>

@@ -1,4 +1,3 @@
-import { Separator } from "@radix-ui/react-separator";
 import React, { useContext } from "react";
 import {
   Card,
@@ -11,6 +10,7 @@ import { ResumeContext } from "./ResumeProvider";
 import { selectedColumnsStyle } from "src/constants/Style";
 import { cx } from "class-variance-authority";
 import { ResumeColumn } from "src/types/Resume";
+import { ToggleContent } from "./ToggleContent";
 
 export const Work = () => {
   const { selectedColumn } = useContext(ResumeContext);
@@ -18,7 +18,6 @@ export const Work = () => {
   return (
     <Card
       className={cx(
-        // "w-[]",
         "flex-1",
         selectedColumn === ResumeColumn.WORK && selectedColumnsStyle
       )}
@@ -30,15 +29,17 @@ export const Work = () => {
         return (
           <>
             <CardContent>
-              <p>{item.company}</p>
-              <p>{item.title}</p>
-              <p>{item.location}</p>
-              <p>{`${item.dateStart} ${item?.dateEnd ?? "now"}`}</p>
-              {item.descriptions.map((value) => (
-                <>{value}</>
-              ))}
+              <ToggleContent title={item.company}>
+                <p>{item.title}</p>
+                <p>{item.location}</p>
+                <p>{`${item.dateStart} ${item?.dateEnd ?? "now"}`}</p>
+                {item.descriptions.map((value, index) => (
+                  <ul className="list-disc" key={index}>
+                    <li>{value}</li>
+                  </ul>
+                ))}
+              </ToggleContent>
             </CardContent>
-            {key !== experiences.length - 1 && <Separator />}
           </>
         );
       })}

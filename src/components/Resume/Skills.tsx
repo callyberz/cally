@@ -12,6 +12,7 @@ import { ResumeContext } from "./ResumeProvider";
 import { cx } from "class-variance-authority";
 import { selectedColumnsStyle } from "src/constants/Style";
 import { ResumeColumn } from "src/types/Resume";
+import { Badge } from "src/components/ui/badge";
 
 export const Skills = () => {
   const { selectedColumn } = useContext(ResumeContext);
@@ -27,19 +28,20 @@ export const Skills = () => {
         <CardTitle>Skills</CardTitle>
         <CardDescription>My programming skills</CardDescription>
       </CardHeader>
-      {skills.map((item, key) => {
+      {skills.map((skill, key) => {
         return (
           <>
             <CardContent>
-              <p>{item.type.toUpperCase()}</p>
-              {item.items.map((value, key) => (
-                <div key={key}>{value}</div>
+              <p>{skill.type.toUpperCase()}</p>
+              {skill.items.map((value, key) => (
+                <Badge variant="outline" key={key} className="mr-2">
+                  {value}
+                </Badge>
               ))}
-              {item.highlights.map((value, key) => (
+              {/* {skill.highlights.map((value, key) => (
                 <div key={key}>{value}</div>
-              ))}
+              ))} */}
             </CardContent>
-            {key !== skills.length - 1 && <Separator />}
           </>
         );
       })}

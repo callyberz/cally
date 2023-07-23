@@ -18,14 +18,14 @@ interface RouteProps {
 
 const Routes: RouteProps[] = [
   {
-    text: "Skils",
-    linkTo: "/skills",
-    icon: <UserCircle2 className="md:mr-2 md:inline" />,
-  },
-  {
     text: "Work",
     linkTo: "/work",
     icon: <Briefcase className="md:mr-2 md:inline" />,
+  },
+  {
+    text: "Skils",
+    linkTo: "/skills",
+    icon: <UserCircle2 className="md:mr-2 md:inline" />,
   },
   {
     text: "Educaiton",

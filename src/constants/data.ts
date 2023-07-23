@@ -21,6 +21,11 @@ interface Skills {
   highlights: string[];
 }
 
+interface TodoList {
+  actionItem: string;
+  finished: boolean;
+}
+
 export const education: EducationExperience[] = [
   {
     school: "The Hong Kong Polytechnic University",
@@ -144,4 +149,23 @@ export const spokenLanguages =
 
 export const social = [
   { website: "LinkedIn", url: "https://www.linkedin.com/in/calvinlee26/" },
+];
+
+export const todoList: TodoList[] = [
+  {
+    actionItem: "Find out problems in life/work",
+    finished: false,
+  },
+  {
+    actionItem: "Blogging using markdown",
+    finished: false,
+  },
+  {
+    actionItem: "Supbase",
+    finished: false,
+  },
+  {
+    actionItem: "Vercel AI SDK",
+    finished: false,
+  },
 ];

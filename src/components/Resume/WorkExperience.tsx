@@ -11,6 +11,7 @@ import { selectedColumnsStyle } from "src/constants/Style";
 import { cx } from "class-variance-authority";
 import { ResumeColumn } from "src/types/Resume";
 import { ToggleContent } from "../common/ToggleContent";
+import { CommonUtil } from "src/utils/CommonUtil";
 
 export const WorkExperience = () => {
   const { selectedColumn } = useContext(ResumeContext);
@@ -35,7 +36,12 @@ export const WorkExperience = () => {
                     <p>{item.title}</p>
                   </div>
                   <div className="text-sm text-slate-100">
-                    <p>{`${item.dateStart} - ${item?.dateEnd ?? "Now"}`}</p>
+                    <p>
+                      {CommonUtil.getDisplayDateRange(
+                        item.dateStart,
+                        item?.dateEnd ?? "Now"
+                      )}
+                    </p>
                     <p>{item.location}</p>
                   </div>
 

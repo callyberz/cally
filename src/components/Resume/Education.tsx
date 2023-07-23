@@ -1,4 +1,3 @@
-import { Separator } from "@radix-ui/react-separator";
 import { cx } from "class-variance-authority";
 import React, { useContext } from "react";
 import {
@@ -12,6 +11,7 @@ import { selectedColumnsStyle } from "src/constants/Style";
 import { education } from "src/constants/data";
 import { ResumeContext } from "./ResumeProvider";
 import { ResumeColumn } from "src/types/Resume";
+import { CommonUtil } from "src/utils/CommonUtil";
 
 export const Education = () => {
   const { selectedColumn } = useContext(ResumeContext);
@@ -27,16 +27,19 @@ export const Education = () => {
         <CardTitle>Education</CardTitle>
         <CardDescription>My previous study...</CardDescription>
       </CardHeader>
-      {education.map((item, key) => {
+      {education.map((item) => {
         return (
           <>
-            <CardContent className="dark:text-slate-400">
+            <CardContent className="text-xl text-slate-100">
               <p>{item.school}</p>
-              <p>{item.location}</p>
-              <p>{item.programme}</p>
-              <p className="">{`${item.dateStart} ${item.dateEnd}`}</p>
+              <div className="text-sm text-slate-400">
+                <p>{item.programme}</p>
+                <p>{item.location}</p>
+                <p>
+                  {CommonUtil.getDisplayDateRange(item.dateStart, item.dateEnd)}
+                </p>
+              </div>
             </CardContent>
-            {key !== education.length - 1 && <Separator />}
           </>
         );
       })}

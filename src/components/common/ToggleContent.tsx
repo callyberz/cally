@@ -19,7 +19,7 @@ export const ToggleContent = ({ title, className, children }: Props) => {
       collapsible
       className={cx("w-full rounded-md", className)}
     >
-      <AccordionItem value="item-1" className="">
+      <AccordionItem value="item-1">
         <AccordionTrigger className="whitespace-nowrap">
           {title}
         </AccordionTrigger>

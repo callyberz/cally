@@ -31,7 +31,7 @@ export const Skills = () => {
         return (
           <>
             <CardContent>
-              <p>{skill.type.toLocaleLowerCase()}</p>
+              <p>{skill.type}</p>
               {skill.items.map((value, key) => (
                 <Badge
                   variant="outline"

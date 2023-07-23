@@ -49,7 +49,7 @@ export const experiences: WorkExperience[] = [
     descriptions: [
       "Proficient in React.js, developed and maintained high-quality web applications using the framework, focusing on Account management",
       "Refactored and converted legacy codebases to use TypeScript, resulting in increased code maintainability and a reduction in bugs",
-      "Integrated server-side rendering (SSR), resulting in improved performance and SEO and better UX",
+      "Integrated server-side rendering (SSR), resulting in improved performance and SEO and better UX (increase in >50% web vitals)",
       "Consistently delivered projects on time under face-paced crypto industry while maintaining high code quality standards",
       "Experience working in an Agile development environment",
     ],
@@ -61,7 +61,6 @@ export const experiences: WorkExperience[] = [
     dateStart: "June 2021",
     dateEnd: "Mar 2022",
     descriptions: [
-      "Full Stack developer",
       "Developed an internal system that integrates with centralized data management, allowing for streamlined dataaccess and improved efficiency",
       "Worked closely with the data management team to ensure proper integration and data security",
       "System/applications planning, development, deployment",
@@ -98,7 +97,7 @@ export const experiences: WorkExperience[] = [
 
 export const skills: Skills[] = [
   {
-    type: "frontend",
+    type: "Frontend",
     items: [
       "React",
       "Javascript",
@@ -113,7 +112,7 @@ export const skills: Skills[] = [
     ],
   },
   {
-    type: "backend",
+    type: "Backend",
     items: ["NodeJS", "ExpressJS", "GraphQL", "MongoDB"],
     highlights: [
       "Design and build RESTful & GraphQL API using Nodejs framework",
@@ -121,7 +120,7 @@ export const skills: Skills[] = [
     ],
   },
   {
-    type: "devops",
+    type: "DevOps",
     items: ["Docker", "Kong", "Jenkins", "GitLab Runner", "AWS", "Azure"],
     highlights: [
       "Deploy API gateway with OAuth2.0 using Kong",
@@ -130,7 +129,7 @@ export const skills: Skills[] = [
     ],
   },
   {
-    type: "others",
+    type: "Others",
     items: ["Solidity", "Ether.js"],
     highlights: ["Launch a couple of NFT website including smart contract"],
   },

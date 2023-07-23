@@ -25,17 +25,22 @@ export const WorkExperience = () => {
       <CardHeader>
         <CardTitle>Working Experience</CardTitle>
       </CardHeader>
-      {experiences.map((item, key) => {
+      {experiences.map((item) => {
         return (
           <>
             <CardContent>
               <ToggleContent title={item.company}>
                 <div className="dark:text-slate-400">
-                  <p>{item.title}</p>
-                  <p>{item.location}</p>
-                  <p>{`${item.dateStart} ${item?.dateEnd ?? "now"}`}</p>
+                  <div className="text-xl text-slate-100">
+                    <p>{item.title}</p>
+                  </div>
+                  <div className="text-sm text-slate-100">
+                    <p>{`${item.dateStart} - ${item?.dateEnd ?? "Now"}`}</p>
+                    <p>{item.location}</p>
+                  </div>
+
                   {item.descriptions.map((value, index) => (
-                    <ul className="list-disc" key={index}>
+                    <ul className="list-inside list-disc" key={index}>
                       <li>{value}</li>
                     </ul>
                   ))}

@@ -55,7 +55,7 @@ export const experiences: WorkExperience[] = [
     ],
   },
   {
-    company: "Silverhorn Investment Advisors Ltd.",
+    company: "Silverhorn Investment Advisors Ltd",
     title: "Software Engineer",
     location: "Hong Kong",
     dateStart: "June 2021",
@@ -82,7 +82,7 @@ export const experiences: WorkExperience[] = [
     ],
   },
   {
-    company: "Right Tech Ltd.",
+    company: "Right Tech Ltd",
     title: "Programmer",
     location: "Hong Kong",
     dateStart: "June 2018",

@@ -1,6 +1,7 @@
 import { type NextPage } from "next";
 import React from "react";
 import Layout from "src/components/Layout";
+import { TypographyH1 } from "src/components/common/TypographyH1";
 import { Checkbox } from "src/components/ui/checkbox";
 import { todoList } from "src/constants/data";
 
@@ -8,7 +9,10 @@ const Home: NextPage = () => {
   return (
     <Layout>
       <div>
-        I build things to prove my concept is feasible. Keep learning and grow.
+        <TypographyH1>
+          I build things to prove my concept is feasible. Keep learning and
+          grow.
+        </TypographyH1>
         {todoList.map((item, key) => {
           const { actionItem } = item;
           return (

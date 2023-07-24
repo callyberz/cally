@@ -20,7 +20,7 @@ export const ToggleContent = ({ title, className, children }: Props) => {
       className={cx("w-full rounded-md", className)}
     >
       <AccordionItem value="item-1">
-        <AccordionTrigger className="whitespace-nowrap">
+        <AccordionTrigger className="whitespace-nowrap text-lg font-semibold tracking-tight">
           {title}
         </AccordionTrigger>
         <AccordionContent>{children}</AccordionContent>

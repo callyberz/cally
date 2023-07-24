@@ -44,7 +44,7 @@ export const WorkExperience = () => {
                 </div>
 
                 {item.descriptions.map((value, index) => (
-                  <ul className="ml-3 list-disc [&>li]:mt-2" key={index}>
+                  <ul className="ml-4 list-disc [&>li]:mt-2" key={index}>
                     <li>{value}</li>
                   </ul>
                 ))}

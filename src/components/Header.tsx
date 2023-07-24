@@ -8,7 +8,13 @@ import {
   navigationMenuTriggerStyle,
 } from "src/components/ui/navigation-menu";
 import { cn } from "src/utils";
-import { Briefcase, HomeIcon, School, UserCircle2 } from "lucide-react";
+import {
+  BookOpen,
+  Briefcase,
+  HomeIcon,
+  School,
+  UserCircle2,
+} from "lucide-react";
 
 interface RouteProps {
   text: string;
@@ -17,6 +23,11 @@ interface RouteProps {
 }
 
 const Routes: RouteProps[] = [
+  {
+    text: "Blog",
+    linkTo: "/blog",
+    icon: <BookOpen className="md:mr-2 md:inline" />,
+  },
   {
     text: "Work",
     linkTo: "/work",

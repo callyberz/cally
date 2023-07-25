@@ -53,7 +53,9 @@ const getPostContent = (slug: string) => {
 export function getPostSlugs(): string[] {
   const prefixPaths = path.join(root, "/blog");
   const files = getAllFilesRecursively(prefixPaths);
-  const slugsArray = [];
+
+  const slugsArray: string[] = [];
+
   // eslint-disable-next-line @typescript-eslint/no-misused-promises
   files.forEach((file) => {
     const fileName = path.basename(file);

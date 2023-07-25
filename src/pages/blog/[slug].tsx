@@ -1,6 +1,12 @@
-import type { GetStaticPaths, GetStaticProps } from "next";
+import type { GetStaticPaths } from "next";
 import Layout from "src/components/Layout";
 import { fsUtil } from "src/utils/fsUtil";
+
+interface StaticProps {
+  params: {
+    slug: string;
+  };
+}
 
 export const getStaticPaths: GetStaticPaths = () => {
   const slugsArray = fsUtil.getPostSlugs();
@@ -13,9 +19,10 @@ export const getStaticPaths: GetStaticPaths = () => {
   };
 };
 
-export const getStaticProps: GetStaticProps = ({ params }) => {
+export const getStaticProps = ({ params }: StaticProps) => {
+  // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
   const { slug } = params;
-  const post = fsUtil.getPostContent(slug as string);
+  const post = fsUtil.getPostContent(slug);
   return {
     props: {
       post: JSON.stringify(post),
@@ -24,6 +31,7 @@ export const getStaticProps: GetStaticProps = ({ params }) => {
 };
 
 export default function Page(props: any) {
+  // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
   const { post } = props;
 
   return (

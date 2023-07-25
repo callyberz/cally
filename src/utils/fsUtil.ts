@@ -1,5 +1,8 @@
 import fs from "fs";
+import matter from "gray-matter";
 import path from "path";
+
+const root = process.cwd();
 
 const pipe =
   <T>(...fns: ((arg: T) => T)[]) =>
@@ -39,6 +42,34 @@ const getAllFilesRecursively = (folder: string): string[] =>
     flattenArray
   )(folder);
 
+const getPostContent = (slug: string) => {
+  const folder = "blog/";
+  const file = `${folder}${slug}.mdx`;
+  const content = fs.readFileSync(file, "utf8");
+  const matterResult = matter(content);
+  return matterResult;
+};
+
+export function getPostSlugs(): string[] {
+  const prefixPaths = path.join(root, "/blog");
+  const files = getAllFilesRecursively(prefixPaths);
+  const slugsArray = [];
+  // eslint-disable-next-line @typescript-eslint/no-misused-promises
+  files.forEach((file) => {
+    const fileName = path.basename(file);
+    slugsArray.push(formatSlug(fileName));
+  });
+
+  return slugsArray;
+}
+
+export function formatSlug(slug: string) {
+  return slug.replace(/\.(mdx|md)/, "");
+}
+
 export const fsUtil = {
   getAllFilesRecursively,
+  getPostContent,
+  getPostSlugs,
+  formatSlug,
 };

@@ -3,19 +3,18 @@ import Layout from "src/components/Layout";
 import { TypographyH3 } from "src/components/common/TypographyH3";
 import { Card, CardContent, CardHeader } from "src/components/ui/card";
 import { PostUtil } from "src/utils/PostUtil";
-import type { GetServerSideProps } from "next";
 import type { PostData } from "src/types/Post";
 
 interface Props {
   postMetadata: PostData[];
 }
 
-export const getServerSideProps: GetServerSideProps<{
-  postMetadata: PostData[];
-}> = async () => {
+export const getStaticProps = async () => {
   const postMetadata = await PostUtil.getPostMetadata();
   return {
-    props: { postMetadata },
+    props: {
+      postMetadata,
+    },
   };
 };
 

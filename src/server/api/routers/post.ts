@@ -1,4 +1,7 @@
-// import { z } from "zod";
+/**
+ * remove this router as Post are from MDX locally
+ */
+import { z } from "zod";
 import { createTRPCRouter, publicProcedure } from "../trpc";
 import { readFileSync } from "fs";
 import path from "path";
@@ -6,7 +9,6 @@ import matter from "gray-matter";
 import { fsUtil } from "src/utils/fsUtil";
 import { remark } from "remark";
 import html from "remark-html";
-import { z } from "zod";
 
 interface MarkdownFile {
   title: string;

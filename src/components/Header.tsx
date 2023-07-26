@@ -7,7 +7,6 @@ import {
   NavigationMenuList,
   navigationMenuTriggerStyle,
 } from "src/components/ui/navigation-menu";
-import { cn } from "src/utils";
 import {
   BookOpen,
   Briefcase,

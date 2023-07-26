@@ -2,15 +2,28 @@ import Link from "next/link";
 import Layout from "src/components/Layout";
 import { TypographyH3 } from "src/components/common/TypographyH3";
 import { Card, CardContent, CardHeader } from "src/components/ui/card";
-import { api } from "src/utils/api";
+import { PostUtil } from "src/utils/PostUtil";
+import type { GetServerSideProps } from "next";
+import type { PostData } from "src/types/Post";
 
-const BlogIndex = () => {
-  const postQuery = api.posts.getAllPosts.useQuery();
+interface Props {
+  postMetadata: PostData[];
+}
 
+export const getServerSideProps: GetServerSideProps<{
+  postMetadata: PostData[];
+}> = async () => {
+  const postMetadata = await PostUtil.getPostMetadata();
+  return {
+    props: { postMetadata },
+  };
+};
+
+const BlogIndex = ({ postMetadata }: Props) => {
   return (
     <Layout>
-      <div>
-        {postQuery.data?.map((post, index) => (
+      <div className="grid grid-cols-1 gap-4 md:grid-cols-1">
+        {postMetadata.map((post, index) => (
           <div key={index}>
             <Link href={`blog/${post?.slug || ""}`}>
               <Card className="mb-4 flex-1 bg-neutral-900">

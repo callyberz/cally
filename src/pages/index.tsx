@@ -17,7 +17,7 @@ const Home: NextPage = () => {
           const { actionItem } = item;
           return (
             <div className="mt-2 flex items-center space-x-2" key={key}>
-              <Checkbox id={actionItem} disabled />
+              <Checkbox id={actionItem} checked={item.finished} />
               <label
                 htmlFor={actionItem}
                 className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"

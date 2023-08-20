@@ -158,7 +158,7 @@ export const todoList: TodoList[] = [
   },
   {
     actionItem: "Blogging using markdown",
-    finished: false,
+    finished: true,
   },
   {
     actionItem: "Supbase",

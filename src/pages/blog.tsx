@@ -21,7 +21,7 @@ export const getStaticProps = async () => {
 const BlogIndex = ({ postMetadata }: Props) => {
   return (
     <Layout>
-      <div className="grid grid-cols-1 gap-4 md:grid-cols-1">
+      <div className="grid w-full grid-cols-1 gap-4 md:grid-cols-1">
         {postMetadata.map((post, index) => (
           <div key={index}>
             <Link href={`blog/${post?.slug || ""}`}>

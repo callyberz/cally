@@ -10,7 +10,7 @@ export default function Layout({ children }: Props) {
   return (
     <div className="p-4">
       <Header />
-      <main className="flex gap-x-4">{children}</main>
+      <main className="flex">{children}</main>
       {/* <Footer /> */}
     </div>
   );

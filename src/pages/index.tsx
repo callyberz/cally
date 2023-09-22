@@ -9,10 +9,7 @@ const Home: NextPage = () => {
   return (
     <Layout>
       <div>
-        <TypographyH1>
-          I build things to prove my concept is feasible. Keep learning and
-          grow.
-        </TypographyH1>
+        <TypographyH1>I build things. Keep learning and grow.</TypographyH1>
         {todoList.map((item, key) => {
           const { actionItem } = item;
           return (

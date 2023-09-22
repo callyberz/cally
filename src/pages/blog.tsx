@@ -22,6 +22,7 @@ const BlogIndex = ({ postMetadata }: Props) => {
   return (
     <Layout>
       <div className="grid w-full grid-cols-1 gap-4 md:grid-cols-1">
+        <TypographyH3>WIP Migrating from notion...</TypographyH3>
         {postMetadata.map((post, index) => (
           <div key={index}>
             <Link href={`blog/${post?.slug || ""}`}>

@@ -2,10 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
-/* @import 'fonts.css';s */
 
 #__next {
-  @apply flex min-h-full flex-col;
 }
 
 @layer base {

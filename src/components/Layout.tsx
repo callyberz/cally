@@ -10,8 +10,7 @@ export default function Layout({ children }: Props) {
   return (
     <div className="p-4">
       <Header />
-      <main className="flex">{children}</main>
-      {/* <Footer /> */}
+      <main className="m-0 p-0">{children}</main>
     </div>
   );
 }

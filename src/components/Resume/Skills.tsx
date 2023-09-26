@@ -15,7 +15,7 @@ export const Skills = () => {
   return (
     <Card
       className={cx(
-        "flex-1 bg-neutral-900",
+        "w-full flex-1 bg-neutral-900",
         selectedColumn === ResumeColumn.ABOUT && selectedColumnsStyle
       )}
     >

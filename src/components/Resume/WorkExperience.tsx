@@ -16,7 +16,7 @@ export const WorkExperience = () => {
   return (
     <Card
       className={cx(
-        "flex-1 bg-neutral-900",
+        "w-full flex-1 bg-neutral-900",
         selectedColumn === ResumeColumn.WORK && selectedColumnsStyle
       )}
     >

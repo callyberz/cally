@@ -57,6 +57,14 @@ const WalletInfo = () => {
     onError: onSignMessageError,
   });
 
+  const onConnectClick = () => {
+    connect();
+  };
+
+  const onDisConnectClick = () => {
+    disconnect();
+  };
+
   return (
     <>
       <TypographyP>✴️ My address is: {address ? address : ""}</TypographyP>
@@ -65,11 +73,19 @@ const WalletInfo = () => {
       </TypographyP>
 
       <div className="flex justify-evenly">
-        <Button variant="outline" onClick={connect} disabled={isConnected}>
+        <Button
+          variant="outline"
+          onClick={onConnectClick}
+          disabled={isConnected}
+        >
           Connect
         </Button>
 
-        <Button variant="outline" onClick={disconnect} disabled={!isConnected}>
+        <Button
+          variant="outline"
+          onClick={onDisConnectClick}
+          disabled={!isConnected}
+        >
           Disconnect
         </Button>
       </div>

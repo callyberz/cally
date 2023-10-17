@@ -169,3 +169,21 @@ export const todoList: TodoList[] = [
     finished: false,
   },
 ];
+
+export const projects = [
+  {
+    name: "Education Centre System",
+    description:
+      "Easily manage students/courses/homework records for an education center with 3 branches and 300+ students enrolled. I also provide a portal for parents to conveniently stay updated on their students&apos; progress and ensure that all assigned tasks have been successfully accomplished.",
+  },
+  {
+    name: "Real-time car listings scraper (testing purpose only)",
+    description:
+      "Actively monitor second-hand car listings based on specific criteria and send push notifications to Telegram.",
+  },
+  {
+    name: "Custom ESLint",
+    description:
+      "Use AST parser to define self-used ESLint rule for much better warning/error prompt",
+  },
+];

@@ -1,4 +1,4 @@
-import Layout from "src/components/Layout";
+import Layout from "src/components/common/Layout";
 import { TypographyH1 } from "src/components/common/TypographyH1";
 import { TypographyP } from "src/components/common/TypographyP";
 import { Button } from "src/components/ui/button";

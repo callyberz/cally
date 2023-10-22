@@ -1,5 +1,5 @@
 import Link from "next/link";
-import Layout from "src/components/Layout";
+import Layout from "src/components/common/Layout";
 import { TypographyH3 } from "src/components/common/TypographyH3";
 import { Card, CardContent, CardHeader } from "src/components/ui/card";
 import { PostUtil } from "src/utils/PostUtil";

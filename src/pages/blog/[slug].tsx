@@ -1,6 +1,6 @@
 import Markdown from "markdown-to-jsx";
 import type { GetStaticPaths } from "next";
-import Layout from "src/components/Layout";
+import Layout from "src/components/common/Layout";
 import type { PostData } from "src/types/Post";
 import { PostUtil } from "src/utils/PostUtil";
 import { fsUtil } from "src/utils/fsUtil";

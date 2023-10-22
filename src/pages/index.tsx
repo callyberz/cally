@@ -1,6 +1,6 @@
 import { type NextPage } from "next";
 import React from "react";
-import Layout from "src/components/Layout";
+import Layout from "src/components/common/Layout";
 import { TypographyH1 } from "src/components/common/TypographyH1";
 import { Checkbox } from "src/components/ui/checkbox";
 import { projects, todoList } from "src/constants/data";

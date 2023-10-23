@@ -1,8 +1,6 @@
 import clsx from "clsx";
-import { LoadableList } from "src/components/SmallTalk/LoadableList";
+import { RandomList } from "src/components/SmallTalk/RandomList";
 import { TypographyH1 } from "src/components/common/TypographyH1";
-import { TypographyP } from "src/components/common/TypographyP";
-import { Button } from "src/components/ui/button";
 import { trashQuestions, trashAnswers } from "src/constants/SmallTalkConsts";
 
 const displayQuestionAnswer = [
@@ -26,16 +24,15 @@ export default function SmallTalk() {
             key={index}
             className={clsx(
               "w-1/2  text-center",
-              isQuestion ? "bg-yellow-600" : "bg-green-800"
+              isQuestion ? "bg-sky-600" : "bg-green-800"
             )}
           >
             <TypographyH1>{item.title}</TypographyH1>
-            <Button variant="outline" className="mt-4">
-              <TypographyP>
-                {isQuestion ? "我唔識問 🤔" : "我撚識答 😭"}
-              </TypographyP>
-            </Button>
-            <LoadableList data={item.data} />
+
+            <RandomList
+              data={item.data}
+              buttonText={isQuestion ? "我唔識問 🤔" : "我撚識答 😭"}
+            />
           </div>
         );
       })}

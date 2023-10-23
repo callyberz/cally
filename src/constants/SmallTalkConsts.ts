@@ -146,7 +146,6 @@ export const trashAnswers = [
   "難搞",
   "firm",
   "掂",
-  "點部署？",
   "點部署",
   "啱呀",
   "啱呀啱呀",

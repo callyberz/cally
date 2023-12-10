@@ -10,16 +10,27 @@ import {
   CardHeader,
   CardTitle,
 } from "src/components/ui/card";
+import { GithubIcon } from "lucide-react";
 
 const Home: NextPage = () => {
   return (
     <Layout>
       <TypographyH1>Projects: </TypographyH1>
       <div className="grid gap-4 py-4 md:grid-cols-2">
-        {projects.map(({ name, description }, index) => (
+        {projects.map(({ name, description, url }, index) => (
           <Card key={index}>
             <CardHeader>
-              <CardTitle>{name}</CardTitle>
+              <CardTitle>
+                {name}
+                {url ? (
+                  <GithubIcon
+                    className="ml-2 inline-block cursor-pointer"
+                    onClick={() => {
+                      window.open(url, "_blank");
+                    }}
+                  />
+                ) : null}
+              </CardTitle>
               <CardDescription>{description}</CardDescription>
             </CardHeader>
           </Card>

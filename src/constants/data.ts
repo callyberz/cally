@@ -166,7 +166,7 @@ export const todoList: TodoList[] = [
     finished: true,
   },
   {
-    actionItem: "Supbase",
+    actionItem: "Supabase",
     finished: false,
   },
   {
@@ -177,18 +177,32 @@ export const todoList: TodoList[] = [
 
 export const projects = [
   {
-    name: "Education Centre System",
-    description:
-      "Easily manage students/courses/homework records for an education center with 3 branches and 300+ students enrolled. I also provide a portal for parents to conveniently stay updated on their students&apos; progress and ensure that all assigned tasks have been successfully accomplished.",
+    name: "YouTube Playback Speed Controller WIP",
+    description: "A Chrome extension that tracks your YouTube playback speed.",
+    url: "https://github.com/callyberz/speed-checker",
   },
   {
-    name: "Real-time car listings scraper (testing purpose only)",
+    name: "NFT minting website",
     description:
-      "Actively monitor second-hand car listings based on specific criteria and send push notifications to Telegram.",
+      "Launched multiple of websites that allows users to mint NFTs.",
+  },
+  {
+    name: "Education Centre All-in-one System",
+    description:
+      "Easily manage students/courses/homework records for an education center with 3 branches and 300+ students enrolled. Provided a portal for parents to conveniently stay updated on their students' progress and ensure that all assigned tasks have been successfully accomplished.",
+  },
+  {
+    name: "Real-time 2nd-hand car listings scraper",
+    description:
+      "Actively monitor second-hand car listings based on specific criteria and send push notifications to Telegram. (testing purpose only)",
   },
   {
     name: "Custom ESLint",
     description:
       "Use AST parser to define self-used ESLint rule for much better warning/error prompt",
+  },
+  {
+    name: "Tree distribution in Hong Kong",
+    description: "Plot tree distribution for 18 districts in Hong Kong by D3js",
   },
 ];
